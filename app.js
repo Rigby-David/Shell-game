@@ -2,6 +2,18 @@
 const buttonOne = document.getElementById('button-one');
 const buttonTwo = document.getElementById('button-two');
 const buttonThree = document.getElementById('button-three');
+const rightSpan = document.getElementById('right');
+const wrongSpan = document.getElementById('wrong');
+const totalSpan = document.getElementById('total');
+
+let count = 0;
+
+buttonOne.addEventListener('click', () => {
+  // update the count
+  count++;
+  // update the view
+  rightSpan.textContent = count;
+});
 
 
 
