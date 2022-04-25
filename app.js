@@ -39,6 +39,27 @@ buttonOne.addEventListener('click', () => {
     totalSpan.textContent = wins + losses;
 });
 
+buttonTwo.addEventListener('click', () => {
+  shellOne.classList.remove('reveal');
+  shellTwo.classList.remove('reveal');
+  shellThree.classList.remove('reveal');
+
+  const randomShell = Math.ceil(Math.random() * 3);
+  if (randomShell === 1) {
+      shellOne.classList.add('reveal');
+      wins++;
+  } else if (randomShell === 2) {
+      shellTwo.classList.add('reveal');
+      losses++;
+  } else {
+      shellThree.classList.add('reveal');
+      losses++;
+  }
+  winSpan.textContent = wins;
+  lossSpan.textContent = losses;
+  totalSpan.textContent = wins + losses;
+});
+
 // let count = 0;
 
 // buttonOne.addEventListener('click', () => {
