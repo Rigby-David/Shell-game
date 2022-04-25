@@ -68,7 +68,11 @@ h2 {
     font-weight: bold;
 }
 
-
+.shells {
+    justify-content: center;
+    display: flex ;
+    flex-direction: row;
+}
 
 .gutter-right {
     margin-right: 20px;

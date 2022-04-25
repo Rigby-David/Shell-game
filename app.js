@@ -2,12 +2,18 @@
 const buttonOne = document.getElementById('button-one');
 const buttonTwo = document.getElementById('button-two');
 const buttonThree = document.getElementById('button-three');
-const rightSpan = document.getElementById('right');
-const wrongSpan = document.getElementById('wrong');
-const totalSpan = document.getElementById('total');
+
 const shellOne = document.getElementById('shell-1');
 const shellTwo = document.getElementById('shell-2');
 const shellThree = document.getElementById('shell-3');
+
+const winSpan = document.getElementById('wins');
+const lossSpan = document.getElementById('losses');
+const totalSpan = document.getElementById('total');
+
+
+
+
 
 let wins = 0;
 let losses = 0;
@@ -16,20 +22,21 @@ buttonOne.addEventListener('click', () => {
     shellOne.classList.remove('reveal');
     shellTwo.classList.remove('reveal');
     shellThree.classList.remove('reveal');
+
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 1) {
         shellOne.classList.add('reveal');
-        right++;
+        wins++;
     } else if (randomShell === 2) {
         shellTwo.classList.add('reveal');
-        wrong++;
+        losses++;
     } else {
         shellThree.classList.add('reveal');
-        total++;
+        losses++;
     }
-    rightSpan.textContent = right;
-    wrongSpan.textContent = wrong;
-    totalSpan.textContent = total;
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    totalSpan.textContent = wins + losses;
 });
 
 // let count = 0;
