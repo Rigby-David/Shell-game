@@ -1,4 +1,9 @@
 // import functions and grab DOM elements
+const buttonOne = document.getElementById('button-one');
+const buttonTwo = document.getElementById('button-two');
+const buttonThree = document.getElementById('button-three');
+
+
 
 // let state
 
