@@ -9,13 +9,14 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 1) **Make a drawing of your app. Simple "wireframes"** 
 
 1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
-Div - img - button
+Div - img - button - span
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
 Need to track the counter state
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
 Div - need someplace to display all the info for each image
 img - need something to display and id/class
 button - need to be able to interact, click addEventListener('click', () = >){}
+span - 
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
 Div - document.getElementById
 Img - getElementById
