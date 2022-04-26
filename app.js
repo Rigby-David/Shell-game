@@ -16,11 +16,20 @@ const totalSpan = document.getElementById('total');
 let wins = 0;
 let losses = 0;
 
-buttonOne.addEventListener('click', () => {
+const displayResults = () => {
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    totalSpan.textContent = wins + losses;
+};
+
+const resetStyles = () => {
     shellOne.classList.remove('reveal');
     shellTwo.classList.remove('reveal');
     shellThree.classList.remove('reveal');
+};
 
+buttonOne.addEventListener('click', () => {
+    resetStyles();
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 1) {
         shellOne.classList.add('reveal');
@@ -32,16 +41,12 @@ buttonOne.addEventListener('click', () => {
         shellThree.classList.add('reveal');
         losses++;
     }
-    winSpan.textContent = wins;
-    lossSpan.textContent = losses;
-    totalSpan.textContent = wins + losses;
+    displayResults();
+    
 });
 
 buttonTwo.addEventListener('click', () => {
-    shellOne.classList.remove('reveal');
-    shellTwo.classList.remove('reveal');
-    shellThree.classList.remove('reveal');
-
+    resetStyles();
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 2) {
         shellTwo.classList.add('reveal');
@@ -53,16 +58,12 @@ buttonTwo.addEventListener('click', () => {
         shellThree.classList.add('reveal');
         losses++;
     }
-    winSpan.textContent = wins;
-    lossSpan.textContent = losses;
-    totalSpan.textContent = wins + losses;
+    displayResults();
+    
 });
 
 buttonThree.addEventListener('click', () => {
-    shellOne.classList.remove('reveal');
-    shellTwo.classList.remove('reveal');
-    shellThree.classList.remove('reveal');
-
+    resetStyles();  
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 3) {
         shellThree.classList.add('reveal');
@@ -74,9 +75,7 @@ buttonThree.addEventListener('click', () => {
         shellTwo.classList.add('reveal');
         losses++;
     }
-    winSpan.textContent = wins;
-    lossSpan.textContent = losses;
-    totalSpan.textContent = wins + losses;
+    displayResults();
 });
 
 // let count = 0;
