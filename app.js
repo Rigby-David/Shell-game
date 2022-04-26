@@ -44,10 +44,10 @@ buttonTwo.addEventListener('click', () => {
 
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 2) {
-        shellOne.classList.add('reveal');
+        shellTwo.classList.add('reveal');
         wins++;
     } else if (randomShell === 1) {
-        shellTwo.classList.add('reveal');
+        shellOne.classList.add('reveal');
         losses++;
     } else {
         shellThree.classList.add('reveal');
@@ -65,13 +65,13 @@ buttonThree.addEventListener('click', () => {
 
     const randomShell = Math.ceil(Math.random() * 3);
     if (randomShell === 3) {
-        shellOne.classList.add('reveal');
+        shellThree.classList.add('reveal');
         wins++;
-    } else if (randomShell === 2) {
-        shellTwo.classList.add('reveal');
+    } else if (randomShell === 1) {
+        shellOne.classList.add('reveal');
         losses++;
     } else {
-        shellThree.classList.add('reveal');
+        shellTwo.classList.add('reveal');
         losses++;
     }
     winSpan.textContent = wins;
