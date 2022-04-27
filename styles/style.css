@@ -67,6 +67,42 @@ h2 {
     font-weight: bold;
 }
 
+.shells {
+    justify-content: center;
+    display: flex ;
+    flex-direction: row;
+}
+
+.shell {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.shell.reveal img {
+    transform: translateY(-60px);
+}
+
+.shell img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 20;
+}
+
+.ball {
+    z-index: 10;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 120px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px -2px 5px rgba(0,0,0,0.6);
+}
+
 .gutter-right {
     margin-right: 20px;
 }
@@ -78,7 +114,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
